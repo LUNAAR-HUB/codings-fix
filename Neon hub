@@ -725,7 +725,97 @@ function nuker()
 
 end
 
-local kavoUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandLittleBrother/SytroNight4ROBLOX/main/libraries/kavo.lua"))()
+local kavoUi = local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local window = kavoUi.CreateLib("Neon hub beta", "DarkTheme")
+
+local entity = loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/Libraries/entityHandler.lua", true))()
+
+do
+
+	local oldcharacteradded = entity.characterAdded
+
+	entity.characterAdded = function(plr, char, localcheck)
+
+		return oldcharacteradded(plr, char, localcheck, function() end)
+
+	end
+
+	entity.fullEntityRefresh()
+
+end
+
+local colorbox
+
+local function makeRainbowText(text)
+
+	spawn(function()
+
+		colorbox = Color3.fromRGB(170,0,170)
+
+		local x = 0
+
+		while wait() do
+
+			colorbox = Color3.fromHSV(x,1,1)
+
+			x = x + 4.5/255
+
+			if x >= 1 then
+
+				x = 0
+
+			end
+
+		end
+
+	end)
+
+	spawn(function()
+
+		repeat
+
+			wait()
+
+			text.TextColor3 = colorbox
+
+		until true == false
+
+	end)
+
+end
+
+local Tab1 = window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("Combats")
+
+local Tab2 = window:NewTab("bd script hub")
+
+local Tab2Section = Tab2:NewSection("script hub")
+
+local Tab3 = window:NewTab("Auto Toxic")
+
+local Tab3Section = Tab3:NewSection("If you turn on Once You Can't Off It")
+
+local Tab4 = window:NewTab("animation")
+
+local Tab4Section = Tab4 :NewSection("Everyone Can See (Fe)")
+
+local Tab5 = window:NewTab("Credits") 
+
+local Tab5Section = Tab5:NewSection("Made By narrator")
+
+local Tab5Section = Tab5:NewSection("animation and auto toxic - to JN Hh gaming")
+
+local Tab5Section = Tab5:NewSection(" credits to all devs")
+
+local Tab5Section = Tab5:NewSection("some codings is from rekt sky")
+
+local Tab5Section =Tab5:NewSection("admin-LUNAR_XD dint help i just paid him to do it")
+
+local Tab6 = window:NewTab("world")
+
+local Tab6Section = Tab6:NewSection("World")
 
 local window = kavoUi.CreateLib("Neon hub beta", "DarkTheme")
 
